@@ -1,0 +1,10 @@
+// https://www.npmjs.com/package/tsconfig-moon
+{
+  "extends": "tsconfig-moon/tsconfig.projects.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,    
+    "module": "ESNext",
+    "target": "ESNext",
+    "skipLibCheck": true
+  }
+}

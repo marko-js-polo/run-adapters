@@ -1,0 +1,3 @@
+# Config Files
+
+In VS Code, all project configuration files (except for tsconfig and project.json) are nested under this file

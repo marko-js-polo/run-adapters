@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "run-adapters",
+  "infra": "monorepo",
+  "scripts": {
+    "check": "nr type && nr test && nr lint",
+    "coverage": "nr test --coverage",
+    "format": "prettier --write ./packages",
+    "lint": "eslint --cache --fix ./packages",
+    "test": "vitest",
+    "type": "tsc --build"
+  },
+  "workspaces": [
+    "packages/*",
+    "sandboxes/*"
+  ],
+  "devDependencies": {
+    "@antfu/ni": "^24.3.0",
+    "@types/node": "^22.14.1",
+    "eslint": "^9.24.0",
+    "eslint-config-moon": "^4.0.1",
+    "prettier": "^3.5.3",
+    "prettier-config-moon": "^1.2.0",
+    "tsconfig-moon": "^1.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}

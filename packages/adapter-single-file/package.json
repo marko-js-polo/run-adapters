@@ -1,0 +1,52 @@
+{
+  "name": "@marko-polo/run-adapter-single-file",
+  "version": "0.0.2",
+  "description": "Marko Run adapter that generates a single HTML file per route with all assets inlined. Useful for building browser extensions and Figma plugins.",
+  "keywords": [],
+  "author": "Saulo Vallory",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marko-js-polo/run-adapters",
+    "directory": "packages/run-adapter-single-file"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.esm.json",
+    "dev": "tsc --watch -p tsconfig.esm.json",
+    "prepublishOnly": "na run build",
+    "publish": "npm login && npm publish --access public"
+  },
+  "dependencies": {
+    "@marko/run-adapter-static": "^1.0.2",
+    "cheerio": "^1.0.0",
+    "esbuild": "^0.21.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "tsconfig-moon": "^1.4.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6"
+  },
+  "peerDependencies": {
+    "@marko/run": "^0.6.4",
+    "vite": ">=6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

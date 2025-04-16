@@ -1,0 +1,17 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": [
+    "consola",
+    "packemon",
+    "stylelint",
+    "taglib",
+    "tsbuildinfo",
+    "unplugin"
+  ],
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.json": "${capture}.*.json",
+    ".config*": ".git*, prettier.*, *config.toml, *config.yaml, *config.yml, *rc, *rc.json, *rc.js, *rc.mjs, *rc.cjs, *rc.ts, *rc.toml, *rc.yaml, *rc.yml, .eslint*, .prettier*, vite.config.*, vitest.*, tsconfig.tsbuildinfo, .*",
+    "Config Files*": ".git*, prettier.*, *config.toml, *config.yaml, *config.yml, *rc, *rc.json, *rc.js, *rc.mjs, *rc.cjs, *rc.ts, *rc.toml, *rc.yaml, *rc.yml, .eslint*, .prettier*, vite.config.*, vitest.*, tsconfig.tsbuildinfo, .*"
+  },
+}
