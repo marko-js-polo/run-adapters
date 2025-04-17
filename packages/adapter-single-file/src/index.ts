@@ -120,12 +120,8 @@ export default function createSingleFileAdapter(options: SingleFileAdapterOption
 			await Promise.allSettled(inlinePromises);
 			console.log("Asset inlining complete.");
 
-			console.log(`Collected files for potential deletion (${allInlinedFiles.size}):`, Array.from(allInlinedFiles).sort());
-
 			// 4. Delete inlined files if the option is enabled
-			if (deleteInlinedFiles && allInlinedFiles.size > 0) {
-				console.log(`Deleting ${allInlinedFiles.size} inlined asset file(s)...`);
-				
+			if (deleteInlinedFiles && allInlinedFiles.size > 0) {				
 				const deletePromises = Array.from(allInlinedFiles).flatMap((filePath) => {
 					const promises: Promise<void>[] = [];
 					promises.push((async () => {

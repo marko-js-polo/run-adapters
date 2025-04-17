@@ -3,6 +3,13 @@
   "description": "The default Marko starter app with TypeScript",
   "version": "1.0.0",
   "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "marko-run",
+    "build": "marko-run build",
+    "preview": "marko-run preview",
+    "start": "node --enable-source-maps ./dist/index.mjs"
+  },
   "dependencies": {
     "marko": "^6.0.0"
   },
@@ -12,14 +19,5 @@
     "@marko/run": "^0.6.4",
     "@marko/run-adapter-static": "^1.0.2",
     "vite": "^6.3.0"
-  },
-  "private": true,
-  "scripts": {
-    "dev": "marko-run",
-    "build": "nr build:static; nr build:single-file",
-    "build:static": "marko-run build --config vite.config.static.ts",
-    "build:single-file": "marko-run build --config vite.config.single-file.ts",
-    "preview": "marko-run preview",
-    "start": "node --enable-source-maps ./dist/index.mjs"
   }
 }
