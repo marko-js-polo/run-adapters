@@ -2,9 +2,12 @@
 {
   "extends": "tsconfig-moon/tsconfig.projects.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,    
+    "allowSyntheticDefaultImports": true,
     "module": "ESNext",
     "target": "ESNext",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "noEmit": false
   }
 }

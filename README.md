@@ -43,16 +43,36 @@ export default defineConfig({
 });
 ```
 
-## Upcoming Adapters
+### `@marko-polo/run-adapter-figma`
 
-### Figma Plugin Adapter (Name TBD)
+Builds a [Marko Run](https://github.com/marko-js/run) application specifically for use as a Figma plugin UI. It handles inlining assets, bundling plugin code, and updating the `manifest.json`. **[Read More >>](./packages/adapter-figma/README.md)**
 
-*   **Goal:** To provide a seamless development and build experience for creating Figma plugins with Marko Run.
-*   **Features:**
-    *   Builds and bundles the plugin UI (HTML/JS/CSS) using Marko Run.
-    *   Builds and bundles the Figma plugin code (TypeScript/JavaScript).
-    *   Keeps the `manifest.json` file synchronized with the build outputs (UI HTML path, main code path).
-*   **Status:** Under development.
+**Installation:**
+
+```sh
+npm install @marko-polo/run-adapter-figma @marko-polo/run-adapter-single-file --save-dev
+```
+
+**Usage (vite.config.js):**
+
+```ts
+import { defineConfig } from "vite";
+import marko from "@marko/run/vite";
+import figmaAdapter from "@marko-polo/run-adapter-figma";
+
+export default defineConfig({
+  plugins: [
+    marko({
+      adapter: figmaAdapter({
+        code: {
+          entryPoint: 'src/plugin/main.ts' // Your Figma plugin code entry point
+        },
+        // manifest: 'manifest.json' // Optional: path to manifest
+      }),
+    }),
+  ],
+});
+```
 
 ## Contributing
 

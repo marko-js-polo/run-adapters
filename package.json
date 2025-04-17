@@ -16,13 +16,16 @@
   ],
   "devDependencies": {
     "@antfu/ni": "^24.3.0",
+    "@marko/run": "^0.6.6",
     "@types/node": "^22.14.1",
     "eslint": "^9.24.0",
     "eslint-config-moon": "^4.0.1",
     "prettier": "^3.5.3",
     "prettier-config-moon": "^1.2.0",
     "tsconfig-moon": "^1.4.0",
+    "turbowatch": "^2.29.4",
     "typescript": "^5.8.3",
+    "vite": "^6.3.1",
     "vitest": "^3.1.1"
   }
 }

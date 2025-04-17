@@ -3,7 +3,13 @@
   "files": [],
   "references": [
     {
-      "path": "packages/adapter-single-file"
+      "path": "./packages/adapter-single-file"
+    },
+    {
+      "path": "./packages/adapter-figma"
+    },
+    {
+      "path": "./sandboxes/marko-figma-plugin-example"
     }
   ]
 }

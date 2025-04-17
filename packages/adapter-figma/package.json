@@ -1,15 +1,18 @@
 {
-  "name": "@marko-polo/run-adapter-single-file",
+  "name": "@marko-polo/run-adapter-figma",
   "version": "0.0.3",
-  "description": "Marko Run adapter that generates a single HTML file per route with all assets inlined. Useful for building browser extensions and Figma plugins.",
-  "keywords": [],
+  "description": "Marko Run adapter to build self-contained UIs for Figma plugins, handling asset inlining, code bundling, and manifest updates.",
+  "keywords": [
+    "marko",
+    "marko-run"
+  ],
   "author": "Saulo Vallory",
   "license": "MIT",
   "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/marko-js-polo/run-adapters",
-    "directory": "packages/adapter-single-file"
+    "directory": "packages/adapter-figma"
   },
   "type": "module",
   "main": "dist/index.js",
@@ -26,17 +29,21 @@
   "scripts": {
     "build": "tsc --build --clean; tsc --build",
     "dev": "tsc --build --watch",
-    "prepublishOnly": "na run build"
+    "prepublishOnly": "na run build",
+    "publish": "npm login && npm publish --access public"
   },
   "dependencies": {
-    "@marko/run-adapter-static": "^1.0.2",
+    "@marko-polo/run-adapter-single-file": "workspace:*",
     "cheerio": "^1.0.0",
     "esbuild": "^0.21.5"
   },
   "devDependencies": {
+    "@types/html-minifier-terser": "^7.0.2",
     "@types/node": "^22.14.1",
+    "bun-types": "^1.2.10",
     "tsconfig-moon": "^1.4.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6"
   },
   "peerDependencies": {
     "@marko/run": "^0.6.4",

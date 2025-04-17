@@ -150,3 +150,4 @@ sandboxes/basic-tags/dist-static/public
 
 # Cursor notes
 .cursor/notes/*
+.marko-run/
