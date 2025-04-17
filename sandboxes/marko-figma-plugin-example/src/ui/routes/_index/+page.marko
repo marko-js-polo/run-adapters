@@ -1,0 +1,114 @@
+import { sendMessage } from '#ui/utils/send-message.js';
+
+let/count = 5;
+
+<main>
+  <header>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27 5V27H5M31 9V31H9M1 1H23V23H1V1Z" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <h2>Rectangle Creator</h2>
+  </header>
+
+  <section>
+    <input id="input" type="number" min="0" value=count />
+    <label for="input">Rectangle Count</label>
+  </section>
+  <section class="actions">
+      <button id="create" class="brand" onClick=(() => sendMessage('cmd:create-shapes', { count }))>
+        Create
+      </button>
+      <button id="cancel" onClick=(() => sendMessage('cmd:close'))>
+        Cancel
+      </button>
+  </section>
+  <footer>
+    <a href="/about" onClick=(() => sendMessage('route:about'))>
+      About
+    </a>
+  </footer>
+</main>
+
+style.scss --
+  @reference "tailwindcss";
+
+  html,
+  body,
+  main {
+    @apply h-full;
+  }
+
+  body,
+  header,
+  input,
+  button {
+    @apply font-sans text-base text-center;
+  }
+
+  body {
+    @apply bg-[var(--figma-color-bg)] text-[var(--figma-color-text)] m-0;
+  }
+
+  button {
+    @apply rounded bg-[var(--figma-color-bg)] text-[var(--figma-color-text)] border border-[var(--figma-color-border)] cursor-pointer py-2 px-4;
+
+    &:hover {
+      @apply bg-[var(--figma-color-bg-hover)];
+    }
+
+    &:active {
+      @apply bg-[var(--figma-color-bg-pressed)];
+    }
+
+    &:focus-visible {
+      @apply border-none outline-[var(--figma-color-border-selected)];
+    }
+
+    &.brand {
+      @apply bg-[var(--figma-color-bg-brand)] text-[var(--figma-color-text-onbrand)] border border-[var(--figma-color-border-brand)];
+
+      &:hover {
+        @apply bg-[var(--figma-color-bg-brand-hover)];
+      }
+
+      &:active {
+        @apply bg-[var(--figma-color-bg-brand-pressed)];
+      }
+
+      &:focus-visible {
+        @apply border-none outline-[var(--figma-color-border-selected)];
+      }
+    }
+  }
+
+  input {
+    @apply bg-[var(--figma-color-bg)] border border-[var(--figma-color-border)] text-[var(--figma-color-text)] p-2;
+
+    &:focus-visible {
+      @apply border-[var(--figma-color-border-selected)] outline-[var(--figma-color-border-selected)];
+    }
+  }
+
+  svg {
+    @apply stroke-[var(--figma-color-icon)];
+  }
+
+  main {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  header, section {
+    @apply flex flex-col items-center justify-center my-4 space-y-2 space-x-2;
+
+    h2 {
+      @apply text-2xl font-bold;
+    }
+  }
+
+  .actions {
+    @apply flex-row;
+  }
+
+  img {
+    @apply w-8 h-auto;
+  }

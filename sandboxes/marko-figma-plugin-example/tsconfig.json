@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es6"],
+    "strict": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["@figma/plugin-typings"],
+    "composite": true,
+    "outDir": "dist",
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

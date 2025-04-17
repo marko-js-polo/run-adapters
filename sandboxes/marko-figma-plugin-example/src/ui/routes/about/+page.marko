@@ -1,0 +1,55 @@
+import { sendMessage } from '#ui/utils/send-message.js';
+
+<div class="container">
+  <header>
+    <img src="./logo.svg" alt="Marko" class="logo">
+  </header>
+  <main class="flex flex-col items-center justify-center text-center">
+    <p class="text-md my-8">
+      This example plugin uses
+      <br>Marko 6, Marko Run,
+      <br>and a custom adapter for Figma plugins.
+    </p>
+    <p class="flex flex-row gap-8 mb-4 items-center justify-center text-xl">
+      <a href="https://markojs.com/v6/docs/setup/" target="_blank">
+        Learn Marko 6
+      </a>
+      <a href="https://github.com/marko-js/run" target="_blank">
+        Learn Marko Run
+      </a>
+    </p>
+    <p>
+      <a class="text-xl my-4" href="https://github.com/marko-js-polo/run-adapters" target="_blank">
+        Check out the Figma adapter
+      </a>
+    </p>
+    <p class="text-base mt-8 mb-2 text-center">
+      This project is part of
+    </p>
+    <a href="https://github.com/marko-js-polo" target="_blank">
+      <img class="w-1/4 inline-block" src="/img/marko-polo.png" alt="Marko Polo logo" />
+    </a>
+
+    <a href="/" class="text-base mt-8 mb-2 text-center text-white" onClick=() => sendMessage('route:index')>
+      ← back
+    </a>
+  </main>
+</div>
+<mouse-mask/>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1em, 2vw, 2em);
+    padding: 1em;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
+  img.logo {
+    width: 12em;
+  }
+</style>

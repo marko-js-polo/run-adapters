@@ -1,0 +1,18 @@
+{
+  "name": "marko-figma-plugin-example",
+  "id": "1494702407151396835",
+  "api": "1.0.0",
+  "main": "NOTE: this field is managed by the figma adapter",
+  "ui": "NOTE: this field is managed by the figma adapter",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "editorType": [
+    "figma"
+  ],
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  }
+}
