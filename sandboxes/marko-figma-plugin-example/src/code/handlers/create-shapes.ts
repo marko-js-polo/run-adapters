@@ -6,6 +6,9 @@ export function handleCreateShapes(msg: { count: number }): void {
   const numberOfRectangles = msg.count;
 
   const nodes: SceneNode[] = [];
+
+  console.log('⚙️ Creating', msg.count, 'shapes');
+
   for (let i = 0; i < numberOfRectangles; i++) {
     const rect = figma.createRectangle();
     rect.x = i * 150;
@@ -13,6 +16,7 @@ export function handleCreateShapes(msg: { count: number }): void {
     figma.currentPage.appendChild(rect);
     nodes.push(rect);
   }
+
   figma.currentPage.selection = nodes;
   figma.viewport.scrollAndZoomIntoView(nodes);
 } 

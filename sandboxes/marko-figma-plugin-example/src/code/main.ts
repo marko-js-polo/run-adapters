@@ -16,7 +16,7 @@ figma.ui.onmessage = (msg: { type: string; [key: string]: any }) => {
   const handler = handlers[msg.type];
 
   if (handler) {
-    handler(msg);
+    handler(msg.data);
   } else {
     console.error('Unknown message type:', msg.type);
   }

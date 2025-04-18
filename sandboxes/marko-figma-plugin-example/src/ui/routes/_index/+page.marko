@@ -50,7 +50,11 @@ style.scss --
   }
 
   button {
-    @apply rounded bg-[var(--figma-color-bg)] text-[var(--figma-color-text)] border border-[var(--figma-color-border)] cursor-pointer py-2 px-4;
+    @apply
+      rounded bg-[var(--figma-color-bg)]
+      text-[var(--figma-color-text)]
+      border border-[var(--figma-color-border)]
+      cursor-pointer py-2 px-4;
 
     &:hover {
       @apply bg-[var(--figma-color-bg-hover)];
@@ -65,7 +69,10 @@ style.scss --
     }
 
     &.brand {
-      @apply bg-[var(--figma-color-bg-brand)] text-[var(--figma-color-text-onbrand)] border border-[var(--figma-color-border-brand)];
+      @apply
+        bg-[var(--figma-color-bg-brand)]
+        text-[var(--figma-color-text-onbrand)]
+        border border-[var(--figma-color-border-brand)];
 
       &:hover {
         @apply bg-[var(--figma-color-bg-brand-hover)];
@@ -98,7 +105,7 @@ style.scss --
   }
 
   header, section {
-    @apply flex flex-col items-center justify-center my-4 space-y-2 space-x-2;
+    @apply flex flex-col items-center justify-center my-4 gap-2;
 
     h2 {
       @apply text-2xl font-bold;
