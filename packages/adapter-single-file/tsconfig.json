@@ -2,7 +2,8 @@
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "emitDeclarationOnly": false,
-    "noEmit": true
+    "outDir": "dist",
+    "rootDir": "src"
   },
   "include": [
     "src/**/*",
@@ -10,10 +11,5 @@
     "types/**/*",
     "../../types/**/*"
   ],
-  "exclude": ["tests/fixtures/**/*"],
-  "references": [
-    {
-      "path": "tsconfig.esm.json"
-    }
-  ]
+  "exclude": ["tests/fixtures/**/*"]
 }

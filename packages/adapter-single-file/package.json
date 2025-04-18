@@ -23,8 +23,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.esm.json",
-    "dev": "tsc --watch -p tsconfig.esm.json",
+    "build": "tsc --build --clean; tsc --build",
+    "dev": "tsc --build --watch",
     "prepublishOnly": "na run build"
   },
   "dependencies": {
@@ -35,8 +35,7 @@
   "devDependencies": {
     "@types/node": "^22.14.1",
     "tsconfig-moon": "^1.4.0",
-    "typescript": "^5.8.3",
-    "vite": "^6.2.6"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "@marko/run": "^0.6.4",
